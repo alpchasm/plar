@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Player</title>
+    <script src="/js/jsmediatags.min.js"></script> <!-- Optional for metadata -->
+    <script src="/js/plsPlayer.js"></script>
+</head>
+<body>
+    <div id="player-container"></div>
+    <script>
+        const player = new PLSPlayer(
+            'player-container',
+            '', // playlistUrl
+            `https://${window.location.host}/plar.html?audio=`, // playerBaseUrl
+            '', // defaultUrl
+            '/js/config/plar.json' // configUrl
+        );
+    </script>
+</body>
+</html>

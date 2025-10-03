@@ -1,0 +1,18 @@
+# 07:38:46 Fri 251003 2j 3 92660 -/- w2 /a/webzq/repo/plar
+*# epjdn rodmant $ true :fri0; pushd /a/webzq ; x=$(find {plar.html,js/{plsPlayer.js,config/plar.json}}|sort ); echo $x; popd
+/a/webzq /a/webzq/repo/plar ~/bin/lib/functionsbash
+js/config/plar.json js/plsPlayer.js plar.html
+/a/webzq/repo/plar ~/bin/lib/functionsbash
+# 07:39:14 Fri 251003 2j 3 92660 -/- w2 /a/webzq/repo/plar
+# epjdn rodmant $ -csum js/config/plar.json js/plsPlayer.js plar.html
++ sha512sum js/config/plar.json js/plsPlayer.js plar.html
+079b0505b39dc1f5040b07d81c8a9c5dd8b379ac358bb7afea6ee4ea7ca304e070e1a9e9e731a33c0a4ed5c582a9bef94c9b2c05203747ca5426f4644b4bbaf1  js/config/plar.json
+e3b0cd7d5491af931a0e40a069831288a8f606011f3a0314b49e442b92828a3178943b38f12ac136ba65c87bfd07ed58c2e1411e2bece3e11c808559b2a21650  js/plsPlayer.js
+c867c036f51fa85ba0622cc8882263cb0c03cdc8b883306efa20ec1b9998731f81f655e79bd0bd3f04dbc79f69ae0fe452eba8909ae5839f8194f50a8ea25dd9  plar.html
+substack has mail
+# 07:39:38 Fri 251003 2j 3 92660 -/- w2 /a/webzq/repo/plar
+*# epjdn rodmant $ c wzq && -csum js/config/plar.json js/plsPlayer.js plar.html
++ sha512sum js/config/plar.json js/plsPlayer.js plar.html
+079b0505b39dc1f5040b07d81c8a9c5dd8b379ac358bb7afea6ee4ea7ca304e070e1a9e9e731a33c0a4ed5c582a9bef94c9b2c05203747ca5426f4644b4bbaf1  js/config/plar.json
+e3b0cd7d5491af931a0e40a069831288a8f606011f3a0314b49e442b92828a3178943b38f12ac136ba65c87bfd07ed58c2e1411e2bece3e11c808559b2a21650  js/plsPlayer.js
+c867c036f51fa85ba0622cc8882263cb0c03cdc8b883306efa20ec1b9998731f81f655e79bd0bd3f04dbc79f69ae0fe452eba8909ae5839f8194f50a8ea25dd9  plar.html
