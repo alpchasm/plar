@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Audio Player</title>
-    <script src="./js/jsmediatags.min.js"></script> <!-- Optional for metadata -->
-    <script src="./js/plsPlayer.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLS Playlist or Audio Player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
 </head>
 <body>
     <div id="player-container"></div>
+    <script src="./js/plsPlayer.js"></script>
     <script>
-        const player = new PLSPlayer(
-            'player-container',
-            '', // playlistUrl
-            `https://${window.location.host}/plar.html?audio=`, // playerBaseUrl
-            '', // defaultUrl
-            './js/config/plar.json' // configUrl
-        );
+        // Initialize PLSPlayer
+        new PLSPlayer('player-container', '', 'https://zq3q.org/dev/plar.html?audio=', '', './js/config/plar.json');
     </script>
 </body>
 </html>
