@@ -1,0 +1,11 @@
+https://zq3q.org/repo/plar/README.md | project overview
+
+https://zq3q.org/repo/plar/prompt_ai_include.md | source code instances for this session.
+
+https://zq3q.org/ai/agree0.html | ai sessio workflow/ground rules
+
+Please read the above.
+
+## main AI prompt 
+
+Consider the about tab on ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about tab shows the git commit hash, instead of the sematic version. For the git commit hash, use the value for "commit-hash" in ./js/config/plar.json .

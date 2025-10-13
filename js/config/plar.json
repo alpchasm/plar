@@ -1,3 +1,8 @@
 {
   "defaultUrl": "https://zq3q.org/pub.pls"
+  "versionInfo": {
+    "commit-hash": "GIT_COMMIT-HASH_PLACEHOLDER",
+    "branch": "GIT_BRANCH_PLACEHOLDER",
+    "tag": "GIT_TAG_PLACEHOLDER"
+  }
 }
