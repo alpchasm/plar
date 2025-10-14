@@ -194,7 +194,7 @@ class PLSPlayer {
     setupEventListeners() {
         this.container.querySelector('#about').addEventListener('click', () => {
             this.clearShareUrl();
-            alert(`PLS Playlist or Audio Player commit ${config['commit-shorthash'] || 'unknown'}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
+            alert(`PLS Playlist or Audio Player v${PLSPlayer.version}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
         });
 
         this.container.querySelector('#help').addEventListener('click', () => {
