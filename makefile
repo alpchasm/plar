@@ -7,7 +7,10 @@ $(shell rm -f $(TMPF))
 
 .PHONY: all install
 
-all: ;
+HTML_VERSIONS := prompt_ai_include.html makefile.html README.html
+	# handy for AI to read these.
+
+all:  $(HTML_VERSIONS)
 
 # define $(blding), $(bltok), $(blding_phony), $(bltok_phony) targets- 2_hours_ago, 30min_ago,  newer
 # Place this stanza after default target, since has *targets*,
@@ -27,7 +30,7 @@ dev_DESTDIR :=  $(WEB_ROOT)/dev
 prod_DESTDIR := $(WEB_ROOT)/prod
 
 .PHONY: dev prod
-dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js
+dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS)
 	$(blding) ;\
 	set -eux;destdir=$($(@)_DESTDIR);\
 	mkdir -p $$destdir;\

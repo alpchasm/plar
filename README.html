@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">README</h1>
+</header>
+<h1 id="visiongoal-document">Vision/Goal Document</h1>
+<p>This tool was inspired by my repeated use of this mpv / bash CLI
+command:</p>
+<pre><code>$              command mpv --vo=null --no-audio-display --load-unsafe-playlists --ytdl-format=worst http://someexample.org/somePlaylist.pls
+$ : or just: ; command mpv --no-audio-display --load-unsafe-playlists https://someexample.org/somePlaylist.pls</code></pre>
+<p>The above works reliably to play long playlists. I have been using
+the syntax for years. I wanted to provide a way for non power users to
+paly log playlists using a web tool.</p>
+<h1 id="functional-specification-incompletefixme">Functional
+Specification | INCOMPLETE/FIXME</h1>
+<h2
+id="the-end-user-should-be-able-to-click-on-an-about-button-to-get-the-git-branch-and-tag-value.">The
+end user should be able to click on an “about” button to get the git
+branch and tag value.</h2>
+<p>Perhaps for example | https://g.co/gemini/share/184fd6a84c27 :</p>
+<pre><code>// app-config.json
+{
+  &quot;apiEndpoint&quot;: &quot;https://api.example.com&quot;,
+  &quot;versionInfo&quot;: {
+    &quot;branch&quot;: &quot;GIT_BRANCH_PLACEHOLDER&quot;,
+    &quot;tag&quot;: &quot;GIT_TAG_PLACEHOLDER&quot;
+  }
+}</code></pre>
+<p>I’m not sure what the value of “apiEndpoint” is, or if it is
+needed.</p>
+<h2
+id="implement-the-load-unsafe-playlists-feature-supported-by-mpv.">Implement
+the “–load-unsafe-playlists” feature supported by mpv.</h2>
+<h2
+id="fail-gracefully-if-there-is-a-problem-playing-a-single-selection-allow-the-user-to-skip-backwords-or-to-the-next-selection.">Fail
+gracefully, if there is a problem playing a single selection, allow the
+user to skip backwords or to the next selection.</h2>
+<h1 id="design-document">Design Document</h1>
+<h2 id="end-user-text-field-input">end user text field input</h2>
+<ul>
+<li>TODO: trim off leading and trailing whitespace</li>
+</ul>
+<hr />
+<h2 id="project-structure">Project Structure</h2>
+<p>This project is small but intends to use a clear separation of
+concerns for easy maintenance.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">File/Directory</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td
+style="text-align: left;"><strong><code>./plar.html</code></strong></td>
+<td style="text-align: left;">End user landing/bootstrap/init page</td>
+</tr>
+<tr class="even">
+<td
+style="text-align: left;"><strong><code>./js/plsPlayer.js</code></strong></td>
+<td style="text-align: left;">The primary application entry point and
+logic for rendering the UI.</td>
+</tr>
+<tr class="odd">
+<td
+style="text-align: left;"><strong><code>./js/config/plar.json</code></strong></td>
+<td style="text-align: left;">Set default playlist URL to load if user
+supplies noting to play.</td>
+</tr>
+<tr class="even">
+<td
+style="text-align: left;"><strong><code>./README.md</code></strong></td>
+<td style="text-align: left;">You are here! The main documentation and
+entry point for new users/developers.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NOT-STARTED:
+<strong><code>changelog</code></strong></td>
+<td style="text-align: left;">I’m using the <a
+href="https://github.com/rfc1036/whois/blob/next/debian/changelog">whois</a>
+changelog as template</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NOT-STARTED:
+<strong><code>app-config.json</code></strong></td>
+<td style="text-align: left;"><strong>Configuration file</strong> for
+application settings (like API endpoints) and version data injected
+during the build.</td>
+</tr>
+</tbody>
+</table>
+<p>It may make sense to move any settings that were planned to go in
+app-config.json into ./js/config/plar.json.</p>
+<h2 id="access-via-github">Access via github</h2>
+<h3 id="main-branch">main branch</h3>
+</body>
+</html>
