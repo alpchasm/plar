@@ -29,8 +29,12 @@ WEB_ROOT := /a/webzq
 dev_DESTDIR :=  $(WEB_ROOT)/dev
 prod_DESTDIR := $(WEB_ROOT)/prod
 
+
+js/config/plar.json ::
+	make -C js/config/
+
 .PHONY: dev prod
-dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS)
+dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS) js/config/plar.json
 	$(blding) ;\
 	set -eux;destdir=$($(@)_DESTDIR);\
 	mkdir -p $$destdir;\

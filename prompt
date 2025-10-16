@@ -1,11 +1,19 @@
-https://zq3q.org/repo/plar/README.md | project overview
+https://zq3q.org/repo/plar/README.html | project overview
 
-https://zq3q.org/repo/plar/prompt_ai_include.md | source code instances for this session.
+https://zq3q.org/repo/plar/prompt_ai_include.html | source code instances for this session.
 
-https://zq3q.org/ai/agree0.html | ai sessio workflow/ground rules
+https://zq3q.org/ai/agree0.html | ai session workflow/ground rules
 
-Please read the above.
+Please ABORT analysis if you can not read any of above html files.
 
-## main AI prompt 
+Please ABORT analysis if you can not read the key project file: <https://zq3q.org/repo/plar/js/plsPlayer.js>
 
-Consider the about tab on ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about tab shows the git commit hash, instead of the sematic version. For the git commit hash, use the value for "commit-hash" in ./js/config/plar.json .
+---
+
+Thu Oct 16 06:32:07 PM CDT 2025
+
+## #bob#promptnewThu0 | about button -- show: git commit hash
+
+Consider the **about** button  on ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about button shows the git short commit hash. For the git commit hash, use the value for "gitCommit" in ./js/config/plar.json .
+
+---
