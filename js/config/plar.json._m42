@@ -1,0 +1,11 @@
+m4_divert(-1)
+
+
+m4_define(_COMMITSHORT,m4_esyscmd( git rev-parse --short HEAD |tr -d \\n))
+
+
+m4_divert(0)m4_dnl
+{
+  	"defaultUrl": "https://zq3q.org/pub.pls",
+	"gitCommit": "_COMMITSHORT"	
+}
