@@ -1,3 +1,4 @@
+< paste this  manually to AI >
 # last prompt / next prompt intro
 
 ## our last interaction
@@ -7,6 +8,10 @@ I was unable to use your last patch, it failed; so let's start fresh.
 ## project decisions
 
 My makefiles are working OK. Please do not be concerned with them; pls stop addressing the "makefile".
+
+## last version of "plar" that loads and functions "somewhat" ==  current commit 
+
+Current commit is at https://zq3q.org/dev/plar.html and this  "somewhat" works.
 
 ## project review
 
@@ -19,4 +24,8 @@ https://zq3q.org/ai/agree0.html | ai session workflow/ground rules
 Please ABORT analysis if you can not read any of above html files.
 
 Please ABORT analysis if you can not read the key project file: <https://zq3q.org/repo/plar/js/plsPlayer.js>
+
+## This is informational only
+
+I am not asking for the AI agent to generate new code now.
 
