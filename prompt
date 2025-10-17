@@ -1,18 +1,15 @@
-https://zq3q.org/repo/plar/README.html | project overview
+## project decisions
 
-https://zq3q.org/repo/plar/prompt_ai_include.html | source code instances for this session.
+My makefiles are working OK. Please do not be concerned with them.
 
-https://zq3q.org/ai/agree0.html | ai session workflow/ground rules
+## current commit
 
-Please ABORT analysis if you can not read any of above html files.
+Fri Oct 17 06:27:11 AM CDT 2025
 
-Please ABORT analysis if you can not read the key project file: <https://zq3q.org/repo/plar/js/plsPlayer.js>
+$ echo  ${PWD%$'\n'} $(git log --max-count=1 --date=short --topo-order --pretty=format:'%ad commit: %h |%d' )
+/a/webzq/repo/plar 2025-10-16 commit: 5e679d3 | (HEAD -> exp/playlistfixes, origin/exp/playlistfixes)
 
----
-
-Thu Oct 16 06:32:07 PM CDT 2025
-
-## #bob#promptnewThu0 | about button -- show: git commit hash
+## NEW_PROMPT | #bob#promptnewThu0 | about button -- show: git commit hash
 
 Consider the **about** button  on ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about button shows the git short commit hash. For the git commit hash, use the value for "gitCommit" in ./js/config/plar.json .
 
