@@ -1,3 +1,13 @@
+# last prompt / next prompt intro
+
+## our last interaction
+
+I was unable to use your last patch, it failed; so let's start fresh.
+
+## project decisions
+
+My makefiles are working OK. Please do not be concerned with them; pls stop addressing the "makefile".
+
 ## project review
 
 https://zq3q.org/repo/plar/README.html | project overview

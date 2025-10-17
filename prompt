@@ -1,13 +1,15 @@
-## project decisions
+< paste this  manually to AI >
 
-My makefiles are working OK. Please do not be concerned with them.
-
-## current commit
+## current git branch and commit
 
 Fri Oct 17 06:27:11 AM CDT 2025
 
-$ echo  ${PWD%$'\n'} $(git log --max-count=1 --date=short --topo-order --pretty=format:'%ad commit: %h |%d' )
-/a/webzq/repo/plar 2025-10-16 commit: 5e679d3 | (HEAD -> exp/playlistfixes, origin/exp/playlistfixes)
+++ git log --max-count=1 --date=short '--pretty=format:%ad commit: %h | %D'
+[...]
+2025-10-17 commit: baa2c24 | HEAD -> exp/playlistfixes | repo-wrkdir: /a/webzq/repo/plar
+
+### does this version function | testing state
+
 
 ## NEW_PROMPT | #bob#promptnewThu0 | about button -- show: git commit hash
 
