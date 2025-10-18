@@ -6,13 +6,12 @@ m4_include(./promptpastecode._m42)
 
 last `make dev` and web test:  Sat 18 Oct 2025 06:30:23 AM CDT 
 
-#### https://zq3q.org/dev/plar.html 
 
-* last patch impact: yaay! --  git short commit shows in 1st "about" popup.
+#### https://zq3q.org/dev/plar.html 
 
 * UI loads, plays -- has many bugs
 
-## NEW_PROMPT | #bob#promptnewSat1-Oct18 | about button -- show: git commit hash -- touch up needed; want only 1 popup, not two
+## NEW_PROMPT | #bob#promptnewSat2-Oct18 | about button -- show: "version" as defined in `package.json`
 
 A file `package.json` has been added to the project.  When the player starts up, it should read package.json for the "version" value.  This project version value should be reported in the popup report that already reports help etc, when the **about** buttom is pressed.
 
