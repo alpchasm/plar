@@ -1,0 +1,17 @@
+## current source code
+
+m4_include(./promptpastecode._m42)
+
+### does this version function | testing state
+
+last `make dev` and web test:  Fri Oct 17 04:04:19 PM CDT 2025
+
+https://zq3q.org/dev/plar.html | UI loads, plays -- has many bugs
+
+## NEW_PROMPT | #bob#promptnewFri1 | about button -- show: git commit hash
+
+Consider the **about** button  ; see code: ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about button shows the git short commit hash. For the git commit hash, use the value of "gitCommit" in ./js/config/plar.json .
+
+Pls propose code GNU patch.
+
+---
