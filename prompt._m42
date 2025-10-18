@@ -8,15 +8,13 @@ last `make dev` and web test:  Sat 18 Oct 2025 06:30:23 AM CDT
 
 #### https://zq3q.org/dev/plar.html 
 
-* last patch impact: yaay! --  git short commit shows up
+* last patch impact: yaay! --  git short commit shows in 1st "about" popup.
 
 * UI loads, plays -- has many bugs
 
-## NEW_PROMPT | #bob#promptnewSat0-Oct18 | about button -- show: git commit hash -- touch up needed; want only 1 popup, not two
+## NEW_PROMPT | #bob#promptnewSat1-Oct18 | about button -- show: git commit hash -- touch up needed; want only 1 popup, not two
 
-The  value of "gitCommit" now shows ups as a result of clicking on the about button; however it shows up in a popup window with nothing else reported. This popup only shows up *after* the first "about" popup window which correctly reports help and other info.
-
-Consider the **about** button  ; see code: ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that clicking on the about button only reults in a *single* instance of a popup window ( not two as it is now). This popup should shows the git short commit hash -- in the list of  of all the other items now reported,
+A file `package.json` has been added to the project.  When the player starts up, it should read package.json for the "version" value.  This project version value should be reported in the popup report that already reports help etc, when the **about** buttom is pressed.
 
 Pls propose code GNU patch.
 
