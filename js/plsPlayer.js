@@ -36,6 +36,8 @@ class PLSPlayer {
         this.playerBaseUrl = playerBaseUrl || `http://${window.location.host}/plar.html?audio=`;
         this.defaultUrl = defaultUrl;
         this.configUrl = configUrl;
+        this.gitCommit = 'Unknown';
+        if (this.configUrl) fetch(this.configUrl).then(r=>r.ok?r.json().then(c=>this.gitCommit=c.gitCommit||'Unknown'):0).catch(()=>{}); 
         this.playlistLastModified = 'Unknown';
 
         try {
@@ -195,6 +197,7 @@ class PLSPlayer {
         this.container.querySelector('#about').addEventListener('click', () => {
             this.clearShareUrl();
             alert(`PLS Playlist or Audio Player v${PLSPlayer.version}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
+            alert(`Git Commit: ${this.gitCommit}`);
         });
 
         this.container.querySelector('#help').addEventListener('click', () => {
