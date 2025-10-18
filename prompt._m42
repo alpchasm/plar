@@ -4,13 +4,19 @@ m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
-last `make dev` and web test:  Fri Oct 17 04:04:19 PM CDT 2025
+last `make dev` and web test:  Sat 18 Oct 2025 06:30:23 AM CDT 
 
-https://zq3q.org/dev/plar.html | UI loads, plays -- has many bugs
+#### https://zq3q.org/dev/plar.html 
 
-## NEW_PROMPT | #bob#promptnewFri1 | about button -- show: git commit hash
+* last patch impact: yaay! --  git short commit shows up
 
-Consider the **about** button  ; see code: ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that the about button shows the git short commit hash. For the git commit hash, use the value of "gitCommit" in ./js/config/plar.json .
+* UI loads, plays -- has many bugs
+
+## NEW_PROMPT | #bob#promptnewSat0-Oct18 | about button -- show: git commit hash -- touch up needed; want only 1 popup, not two
+
+The  value of "gitCommit" now shows ups as a result of clicking on the about button; however it shows up in a popup window with nothing else reported. This popup only shows up *after* the first "about" popup window which correctly reports help and other info.
+
+Consider the **about** button  ; see code: ./js/plsPlayer.js. Please provide a "patch" to plsPlayer.js, so that clicking on the about button only reults in a *single* instance of a popup window ( not two as it is now). This popup should shows the git short commit hash -- in the list of  of all the other items now reported,
 
 Pls propose code GNU patch.
 
