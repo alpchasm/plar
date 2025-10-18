@@ -1,0 +1,30 @@
+### code pastes below | relative to git repo working dir == https://zq3q.org/repo/plar/
+
+m4_esyscmd( bash -c 'set -x;pwd;git log --max-count=1 --date=short "--pretty=format:%ad commit: %h | %D"'  2>&1)
+
+m4_esyscmd( bash -c 'set -x;ls -logrt ./plar.html ./js/plsPlayer.js ./js/config/plar.json' 2>&1)
+
+m4_esyscmd( bash -c 'set -x;git status  plar.html js/plsPlayer.js' 2>&1)
+
+---
+
+./plar.html :
+
+```
+m4_include(plar.html)```
+
+./package.json:
+
+```
+m4_include(./package.json)```
+
+./js/plsPlayer.js:
+
+```
+m4_include(./js/plsPlayer.js)```
+
+./js/config/plar.json :
+
+```
+m4_include(./js/config/plar.json)```
+

@@ -35,8 +35,10 @@ prod_DESTDIR := $(WEB_ROOT)/prod
 js/config/plar.json ::
 	make -C js/config/
 
+plar.html :;
+
 .PHONY: dev prod
-dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS) js/config/plar.json
+dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS) js/config/plar.json package.json
 	$(blding) ;\
 	set -eux;destdir=$($(@)_DESTDIR);\
 	mkdir -p $$destdir;\
