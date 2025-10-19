@@ -782,13 +782,21 @@ class PLSPlayer {
             track.artist = metadata.artist;
             track.album = metadata.album;
             this.updateMetadata();
-        } catch (error) {
-            this.statusDiv.textContent = 'Failed to fetch metadata.';
+        } catch (error) { // Log metadata fetch failures, but don't halt playback
+            console.warn(`Failed to fetch metadata for track ${index + 1}: ${error.message}`);
+            this.statusDiv.textContent = 'Failed to fetch metadata, attempting playback...';
         }
-        this.audio.play().catch(error => {
-            this.showErrorAlert(`Playback error: ${error.message}`, track.baseUrl);
+        this.audio.play().catch(async (error) => {
+            const errorMessage = `Playback error for track ${index + 1}: ${error.message}`;
+            console.error(errorMessage, track.baseUrl); // Log error 
+            this.showErrorAlert(errorMessage, track.baseUrl); // Alert user 
             this.playerState = 'error';
             this.updatePlayButton();
+
+            // Delay and switch to next item (emulate --load-unsafe-playlists tolerance) [cite: 444, 447]
+            this.statusDiv.textContent = `Error: ${error.message}. Skipping to next track in 10 seconds...`;
+            await new Promise(resolve => setTimeout(resolve, 10000)); // 10 second delay 
+            this.playTrack(this.currentIndex + 1);
         });
     }
 
