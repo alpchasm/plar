@@ -1,4 +1,4 @@
-##   ai agent/human worksteps/groundrules | AI-agent please read:  <https://zq3q.org/ai/agree0.html> 
+## ai agent/human worksteps/groundrules | AI-agent please read:  <https://zq3q.org/ai/agree0.html> 
 
 ## current source code
 
@@ -6,19 +6,16 @@ m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
-last `make dev` and web test:  Sun Oct 19 11:41:55 AM CDT 2025
+last `make dev` and web test:  
+Sun Oct 19 05:41:47 PM CDT 2025
 
 #### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
 * UI loads, plays -- has many bugs
 
-Clicking "Next" used to always change the pathname-leafname in playlist to unknown; now it does so less often.
+## NEW_PROMPT | #bob#promptnewSun5-Oct19 | html5 player wrongly spawned
 
-## NEW_PROMPT | #bob#promptnewSun3-Oct19 | selection pathname-leafname in playlist becomes "Unknown" clicking Next
-
-In the visual listing of the playlist; if the current selection is row 1, and I click Next to go to row two, then the selection pathname-leafname in in row one becomes  "Unknown".  
-
-Please review the code for Next and Previous button pushes, as though the code was entirely suspect; and propose changes. Clicking on Previous now introduces "Unknown" values.
+If the end user clicks on a given item in the playlist, it should and often does allow playing of that selection. Unfortunately, sometimes, a new browser tab  appears and the selection starts playing as what looks to be a simple html5 player -- pls fix this bug.
 
 Pls propose a code update using a GNU unified patch with plenty of context.
 

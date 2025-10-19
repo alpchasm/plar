@@ -481,7 +481,7 @@ class PLSPlayer {
             html += `
                 <tr style="background-color: ${i === this.currentIndex ? '#e9ecef' : 'transparent'}; cursor: pointer;" onclick="document.getElementById('player-container').PLSPlayer.playTrack(${i});">
                     <td style="padding: 5px; border: 1px solid #ddd;">${i + 1}</td>
-                    <td style="padding: 5px; border: 1px solid #ddd;"><a href="${track.url}" style="color: #007bff; text-decoration: none;">${track.title}</a></td>
+                    <td style="padding: 5px; border: 1px solid #ddd;"><a href="${track.url}" onclick="event.preventDefault();" style="color: #007bff; text-decoration: none;">${track.title}</a></td>
                     <td style="padding: 5px; border: 1px solid #ddd;">${track.length >= 0 ? this.formatTime(track.length) : 'Unknown'}</td>
                 </tr>`;
         }
