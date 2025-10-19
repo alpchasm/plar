@@ -6,18 +6,19 @@ m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
-last `make dev` and web test:  Sun Oct 19 07:43:44 AM CDT 2025
+last `make dev` and web test:  Sun Oct 19 11:41:55 AM CDT 2025
 
 #### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
 * UI loads, plays -- has many bugs
 
-Now skips to next selection after 10 sec when "no supported sources" error happens.
+Clicking "Next" used to always change the pathname-leafname in playlist to unknown; now it does so less often.
 
-## NEW_PROMPT | #bob#promptnewSun1-Oct19 | selection pathname-leafname in playlist becomes "Unknown" after playing..
+## NEW_PROMPT | #bob#promptnewSun3-Oct19 | selection pathname-leafname in playlist becomes "Unknown" clicking Next
 
-In the visual listing of the playlist; the first field after the list number, which normally displays the leaf node of the item ( often this is the mp3 file name ), is displayed as "Unknown"; when the play goes to the next selection.
+In the visual listing of the playlist; if the current selection is row 1, and I click Next to go to row two, then the selection pathname-leafname in in row one becomes  "Unknown".  
 
+Please review the code for Next and Previous button pushes, as though the code was entirely suspect; and propose changes. Clicking on Previous now introduces "Unknown" values.
 
 Pls propose a code update using a GNU unified patch with plenty of context.
 
