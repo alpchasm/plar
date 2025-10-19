@@ -172,10 +172,13 @@ class PLSPlayer {
                             onError: error => reject(error)
                         });
                     });
-                    metadata.title = tags.title || metadata.title;
-                    metadata.artist = tags.artist || metadata.artist;
-                    metadata.album = tags.album || metadata.album;
+                    // Only overwrite title/artist/album if the tag actually provides a non-empty value
+                    metadata.title = tags.title && tags.title.trim() !== '' ? tags.title : metadata.title;
+                    metadata.artist = tags.artist && tags.artist.trim() !== '' ? tags.artist : metadata.artist;
+                    metadata.album = tags.album && tags.album.trim() !== '' ? tags.album : metadata.album;
                 }
+
+
                 return metadata;
             } catch (error) {
                 console.warn(`fetchMetadataWithRetry: attempt ${i + 1} failed, error=`, error);
@@ -566,7 +569,7 @@ class PLSPlayer {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
             track.lastModified = metadata.lastModified;
-            track.title = metadata.title || track.title;
+            track.title = metadata.title.trim() !== '' ? metadata.title : track.title;
             track.artist = metadata.artist;
             track.album = metadata.album;
             this.updateMetadata();

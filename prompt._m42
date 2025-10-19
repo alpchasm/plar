@@ -6,19 +6,18 @@ m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
-last `make dev` and web test:  Sun Oct 19 06:14:04 AM CDT 2025
+last `make dev` and web test:  Sun Oct 19 07:43:44 AM CDT 2025
 
 #### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
 * UI loads, plays -- has many bugs
 
-## NEW_PROMPT | #bob#promptnewSun0-Oct19 | tolerate/keep going in playlist after errs. Emulate `mpv --load-unsafe-playlists ...`
+Now skips to next selection after 10 sec when "no supported sources" error happens.
 
-Please explore and explain the  `mpv --load-unsafe-playlists ...` feature. Can we use a similar approach to handling troublesome playlist entries?
+## NEW_PROMPT | #bob#promptnewSun1-Oct19 | selection pathname-leafname in playlist becomes "Unknown" after playing..
 
-DNS resolver issues seem to account for some failures. I suggest first trying to resolve the domain, but wait up to 15 sec/perhaps even retrying once more after that delay; is something like that feasible?
+In the visual listing of the playlist; the first field after the list number, which normally displays the leaf node of the item ( often this is the mp3 file name ), is displayed as "Unknown"; when the play goes to the next selection.
 
-When playing a playlist and a list item triggers the "no supported sources" error, then alert the user, introduce a 10 second delay and switch to the next item on the list -- i.e. keep going anyway.  It's important though that is error be logged.
 
-Pls propose code GNU patch.
+Pls propose a code update using a GNU unified patch with plenty of context.
 
