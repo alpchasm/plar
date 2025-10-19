@@ -1,24 +1,24 @@
+##   ai agent/human worksteps/groundrules | AI-agent please read:  <https://zq3q.org/ai/agree0.html> 
+
 ## current source code
 
 m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
-last `make dev` and web test:  Sat 18 Oct 2025 06:30:23 AM CDT 
+last `make dev` and web test:  Sun Oct 19 06:14:04 AM CDT 2025
 
-
-#### https://zq3q.org/dev/plar.html 
+#### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
 * UI loads, plays -- has many bugs
 
-## NEW_PROMPT | #bob#promptnewSat2-Oct18 | about button -- show: "version" as defined in `package.json`
+## NEW_PROMPT | #bob#promptnewSun0-Oct19 | tolerate/keep going in playlist after errs. Emulate `mpv --load-unsafe-playlists ...`
 
-A file `package.json` has been added to the project.  When the player starts up, it should read package.json for the "version" value.  This project version value should be reported in the popup report that already reports help etc, when the **about** buttom is pressed.
+Please explore and explain the  `mpv --load-unsafe-playlists ...` feature. Can we use a similar approach to handling troublesome playlist entries?
+
+DNS resolver issues seem to account for some failures. I suggest first trying to resolve the domain, but wait up to 15 sec/perhaps even retrying once more after that delay; is something like that feasible?
+
+When playing a playlist and a list item triggers the "no supported sources" error, then alert the user, introduce a 10 second delay and switch to the next item on the list -- i.e. keep going anyway.  It's important though that is error be logged.
 
 Pls propose code GNU patch.
 
----
-
-## results of #bob#promptnewSat2-Oct18
-
-I did the patch using vim. See [https://x.com/i/grok/share/LGdHAQzsPLwq5tf714TuvT71A]. It worked.

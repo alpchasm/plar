@@ -1,12 +1,4 @@
 // plsPlayer.js
-// Changelog:
-// - Added updateMetadata method for consistent metadata display
-// - Improved error handling in playTrack and prepareTrack
-// - Optimized parsePLS to handle malformed files
-// - Consolidated URL parsing logic
-// - Enhanced UI state management for better accessibility
-// - Added debouncing to showErrorAlert
-// - Ensured complete code without truncation
 
 class PLSPlayer {
 
