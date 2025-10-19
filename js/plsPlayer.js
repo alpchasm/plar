@@ -569,7 +569,7 @@ class PLSPlayer {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
             track.lastModified = metadata.lastModified;
-            track.title = metadata.title.trim() !== '' ? metadata.title : track.title;
+            track.title = metadata.title && metadata.title.trim() !== '' ? metadata.title : track.title;
             track.artist = metadata.artist;
             track.album = metadata.album;
             this.updateMetadata();
@@ -781,7 +781,7 @@ class PLSPlayer {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
             track.lastModified = metadata.lastModified;
-            track.title = metadata.title || track.title;
+            track.title = metadata.title && metadata.title.trim() !== '' ? metadata.title : track.title;
             track.artist = metadata.artist;
             track.album = metadata.album;
             this.updateMetadata();
