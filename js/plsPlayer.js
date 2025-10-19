@@ -1,5 +1,4 @@
 // plsPlayer.js
-// Version: 1.0.77.7
 // Changelog:
 // - Added updateMetadata method for consistent metadata display
 // - Improved error handling in playTrack and prepareTrack
@@ -10,7 +9,6 @@
 // - Ensured complete code without truncation
 
 class PLSPlayer {
-    static version = "1.0.77.7";
 
     constructor(containerId, playlistUrl = '', playerBaseUrl = '', defaultUrl = '', configUrl = '') {
         console.log('PLSPlayer constructor called with containerId:', containerId, 'playlistUrl:', playlistUrl, 'playerBaseUrl:', playerBaseUrl, 'defaultUrl:', defaultUrl, 'configUrl:', configUrl);
@@ -198,8 +196,8 @@ class PLSPlayer {
     setupEventListeners() {
         this.container.querySelector('#about').addEventListener('click', () => {
             this.clearShareUrl();
-            // alert(`PLS Playlist or Audio Player Git Commit: ${this.gitCommit} v${PLSPlayer.version}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
-            alert(`PLS Playlist or Audio Player v${this.projectVersion} | Git: ${this.gitCommit} v${PLSPlayer.version}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
+            // alert(`PLS Playlist or Audio Player Git Commit: ${this.gitCommit} \nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
+            alert(`PLS Playlist or Audio Player v${this.projectVersion} | Git: ${this.gitCommit}\nPlaylist Last Modified: ${this.playlistLastModified}\n\nSupports PLS playlists or single audio files (MP3/MP4) with play/pause, next/prev, speed controls, and segment playback via #t=start,end or #t=HH:MM:SS,HH:MM:SS. Use arrow keys for navigation and 'SPACE', 's', 'e', 'b', 'n', 'p', 'P', 'j', 'J', 'c' keys for control. HTTP audio may not play on HTTPS pages; use HTTP player URL: ${this.getHttpPlayerUrl()}.`);
         });
 
         this.container.querySelector('#help').addEventListener('click', () => {
