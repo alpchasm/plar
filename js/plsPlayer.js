@@ -535,7 +535,7 @@ class PLSPlayer {
         let baseUrl = urlParts[0];
         let start = 0;
         let end = Infinity;
-        let title = baseUrl.split('/').pop() || 'Unknown';
+        let title = baseUrl.split('/').pop().trim() || 'Unknown';
 
         if (urlParts[1]) {
             const timeParts = urlParts[1].split(',');
@@ -569,9 +569,7 @@ class PLSPlayer {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
             track.lastModified = metadata.lastModified;
-            track.title = metadata.title && metadata.title.trim() !== '' ? metadata.title : track.title;
-            track.artist = metadata.artist;
-            track.album = metadata.album;
+            this.updateTrackMetadata(track, metadata);
             this.updateMetadata();
         } catch (error) {
             this.statusDiv.textContent = 'Failed to fetch metadata.';
@@ -781,9 +779,7 @@ class PLSPlayer {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
             track.lastModified = metadata.lastModified;
-            track.title = metadata.title && metadata.title.trim() !== '' ? metadata.title : track.title;
-            track.artist = metadata.artist;
-            track.album = metadata.album;
+			this.updateTrackMetadata(track, metadata);
             this.updateMetadata();
         } catch (error) { // Log metadata fetch failures, but don't halt playback
             console.warn(`Failed to fetch metadata for track ${index + 1}: ${error.message}`);
@@ -801,6 +797,18 @@ class PLSPlayer {
             await new Promise(resolve => setTimeout(resolve, 10000)); // 10 second delay 
             this.playTrack(this.currentIndex + 1);
         });
+    }
+    updateTrackMetadata(track, metadata) {
+        const isPlaceholder = (value) => {
+            if (!value) return true;
+            const trimmed = value.trim();
+            return trimmed === '' || trimmed.toLowerCase() === 'unknown';
+        };
+        
+        // Only update a property if the new metadata is not a placeholder or empty/null.
+        if (!isPlaceholder(metadata.title)) track.title = metadata.title;
+        if (!isPlaceholder(metadata.artist)) track.artist = metadata.artist;
+        if (!isPlaceholder(metadata.album)) track.album = metadata.album;
     }
 
     clearShareUrl() {
