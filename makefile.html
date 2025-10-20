@@ -38,11 +38,11 @@ js/config/plar.json ::
 plar.html :;
 
 .PHONY: dev prod
-dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js $(HTML_VERSIONS) js/config/plar.json package.json
+dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  package.json      $(HTML_VERSIONS)
     $(blding) ;\
     set -eux;destdir=$($(@)_DESTDIR);\
     mkdir -p $$destdir;\
     rsync -av -R $^ $$destdir;\
-    cd $$destdir; pwd;find . -type f
+    cd $$destdir; pwd;ls -logrt $$(find . -type f)
     echo test URL: $(WEB_ROOT_URL)/$@/plar.html
 </code></pre>
