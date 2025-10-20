@@ -568,6 +568,7 @@ class PLSPlayer {
         this.updatePlayButton();
         this.updateNavButtons();
         this.updatePlaylistWindow();
+		this.updateCurrentTimeDisplay();
         try {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;
@@ -593,6 +594,10 @@ class PLSPlayer {
             return;
         }
         this.metadataDiv.textContent = `Title: ${track.title}\nArtist: ${track.artist || 'Unknown'}\nAlbum: ${track.album || 'Unknown'}\nSize: ${track.size}\nLast Modified: ${track.lastModified}`;
+    }
+
+    updateCurrentTimeDisplay() {
+        this.currentTimeSpan.textContent = this.formatTime(this.audio.currentTime);
     }
 
     changeSpeed(delta) {
@@ -783,6 +788,7 @@ class PLSPlayer {
         this.updatePlayButton();
         this.updateNavButtons();
         this.updatePlaylistWindow();
+        this.updateCurrentTimeDisplay();
         try {
             const metadata = await this.fetchMetadataWithRetry(track.baseUrl);
             track.size = metadata.size;

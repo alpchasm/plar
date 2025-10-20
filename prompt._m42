@@ -7,30 +7,19 @@ m4_include(./promptpastecode._m42)
 ### does this version function | testing state
 
 last `make dev` and web test:  
-Sun Oct 19 05:41:47 PM CDT 2025
+Mon Oct 20 07:32:09 AM CDT 2025
 
 #### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
-* yes, UI loads, plays -- has many bugs
+* yes, UI loads, plays -- has fewer bugs
 
-## NEW_PROMPT | #bob#promptnewSun5-Oct19 | html5 player wrongly spawned
+## NEW_PROMPT | #bob#promptnewMon0-Oct20 | 
 
-https://gemini.google.com/share/1b081af9e98a | this provided the fix 
+Consider 
 
-Consider:
+`https://zq3q.org/dev/plar.html?audio=https://api.substack.com/feed/podcast/176514944/ef635e62938f1197424ae7176ad2c5fe.mp3?token=51365c27-996f-4ad7-b0b9-ea4ddb1e25b3#t=00:08:13`
 
-https://api.substack.com/feed/podcast/176514944/ef635e62938f1197424ae7176ad2c5fe.mp3
-
-vs 
-
-https://api.substack.com/feed/podcast/176514944/ef635e62938f1197424ae7176ad2c5fe.mp3?token=51365c27-996f-4ad7-b0b9-ea4ddb1e25b3
-
-The 1st URL plays just fine in the javascript player.  THe 2nd plays OK using  mpv, but fails to play in our javascript player. Pls speculate why. Does this suggest a workwround/fix for our javascript audio player?
-
-
-## prior prompt:
-
-If the user clicks on an item in the playlist, it should and often does allow playing of that selection. Unfortunately, sometimes, a new browser tab  appears and the selection starts playing as what looks to be a simple html5 player -- pls fix this bug.
+This loads and plays ok; but after it loads the "Current Time" field reported to the user shows 00:00:00, instead of 00:08:13
 
 Pls propose a code update using a GNU unified patch with plenty of context.
 
