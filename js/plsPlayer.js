@@ -557,7 +557,11 @@ class PLSPlayer {
         }
         this.currentIndex = index;
         const track = this.tracks[index];
-        this.audio.src = `${track.baseUrl}?t=${Date.now()}`;
+
+		// Determine the correct separator for the anti-caching timestamp parameter
+		const separator = track.baseUrl.includes('?') ? '&' : '?';
+		this.audio.src = `${track.baseUrl}${separator}t=${Date.now()}`;
+
         this.audio.currentTime = track.start;
         this.currentEnd = track.end;
         this.playerState = 'loaded';
@@ -767,7 +771,12 @@ class PLSPlayer {
         }
         this.currentIndex = index;
         const track = this.tracks[index];
-        this.audio.src = `${track.baseUrl}?t=${Date.now()}`;
+        
+	    // Determine the correct separator for the anti-caching timestamp parameter
+		const separator = track.baseUrl.includes('?') ? '&' : '?';
+		this.audio.src = `${track.baseUrl}${separator}t=${Date.now()}`;
+
+
         this.audio.currentTime = track.start;
         this.currentEnd = track.end;
         this.playerState = 'loaded';
