@@ -37,6 +37,12 @@ js/config/plar.json ::
 
 plar.html :;
 
+.PHONY: status
+
+status ::
+	grep -n gitCommit js/config/plar.json
+	git rev-parse --short HEAD
+
 .PHONY: dev prod
 dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  package.json		 $(HTML_VERSIONS)
 	$(blding) ;\
@@ -45,4 +51,5 @@ dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  package.json		 $(
 	rsync -av -R $^ $$destdir;\
 	cd $$destdir; pwd;ls -logrt $$(find . -type f)
 	echo test URL: $(WEB_ROOT_URL)/$@/plar.html
+	make status
 
