@@ -50,6 +50,7 @@ dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  		 $(HTML_VERSION
 	set -eux;destdir=$($(@)_DESTDIR);\
 	mkdir -p $$destdir;\
 	rsync -av -R $^ $$destdir;\
+	job="sed s/_BLDTARGET_/$@/ < ./plar.html > $$destdir/plar.html"; eval $$job;\
 	cd $$destdir; pwd;ls -logrt $$(find . -type f)
 	echo test URL: $(WEB_ROOT_URL)/$@/plar.html
 	make status
