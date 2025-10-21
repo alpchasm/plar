@@ -11,5 +11,6 @@ https://zq3q.org/dev/plar.html?audio=https://api.substack.com/feed/podcast/17651
 * P    | you may copy shorter media URL at current ts
 * j    | enter jump as HH:MM:SS
 * J    | enter play list row number
+* s    | set ts to segment START
 * e    | set ts to segment END
 * n    | set ts to END
