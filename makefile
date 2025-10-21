@@ -29,7 +29,8 @@ WEB_ROOT_URL := https://zq3q.org
 
 WEB_ROOT := /a/webzq
 dev_DESTDIR :=  $(WEB_ROOT)/dev
-prod_DESTDIR := $(WEB_ROOT)/prod
+prod_DESTDIR := $(WEB_ROOT)/plar
+test_DESTDIR := $(WEB_ROOT)/test
 
 
 js/config/plar.json ::
@@ -44,7 +45,7 @@ status ::
 	git rev-parse --short HEAD
 
 .PHONY: dev prod
-dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  package.json		 $(HTML_VERSIONS)
+dev prod: ./plar.html ./js/config/plar.json ./js/plsPlayer.js  		 $(HTML_VERSIONS)
 	$(blding) ;\
 	set -eux;destdir=$($(@)_DESTDIR);\
 	mkdir -p $$destdir;\
