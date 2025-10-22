@@ -2,17 +2,22 @@
 
 ## current source code
 
+Assume all code in a single backtick block is continuous and ignore any line numbering or source markers within the code when generating a patch's context lines. Ignore the artificial line breaks in the input block.  Treat literal backslash n text ( e.g ```"\n" as literal code``` within the back tic markdown blocks ).
+
 m4_include(./promptpastecode._m42)
 
 ### does this version function | testing state
 
 last `make dev` and web test:  
-Wed Oct 22 08:33:01 AM CDT 2025
+Wed Oct 22 08:52:02 AM CDT 2025
 
 #### https://zq3q.org/dev/plar.html  | End user test report -- state before just prior to this prompt
 
 * yes, UI loads, plays -- has fewer bugs
 
-## NEW_PROMPT | #bob#promptnew20WedOct/0 | 
+## NEW_PROMPT | #bob#promptnew20WedOct/2 | 
 
-Pls make a GNU unified patch to allow the max play speed to now be 16X instead of the current max value of 2X.
+Please ensure that the current-media-selection metadata field-value pairs are always reported as one instance per line; i.e. as a "\n" delimited list.
+
+* * *
+https://gemini.google.com/share/e005501be642 | soln

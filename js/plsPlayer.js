@@ -593,7 +593,13 @@ class PLSPlayer {
             this.metadataDiv.textContent = 'Metadata will appear here.';
             return;
         }
-        this.metadataDiv.textContent = `Title: ${track.title}\nArtist: ${track.artist || 'Unknown'}\nAlbum: ${track.album || 'Unknown'}\nSize: ${track.size}\nLast Modified: ${track.lastModified}`;
+
+        this.metadataDiv.innerHTML = `Title: ${track.title}<br>
+			Artist: ${track.artist || 'Unknown'}<br>
+			Album: ${track.album || 'Unknown'}<br>
+			Size: ${track.size}<br>
+			Last Modified: ${track.lastModified}`;
+
     }
 
     updateCurrentTimeDisplay() {
