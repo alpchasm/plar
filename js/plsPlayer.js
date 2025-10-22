@@ -601,7 +601,7 @@ class PLSPlayer {
     }
 
     changeSpeed(delta) {
-        this.playbackRate = Math.max(0.25, Math.min(this.speedMode === '2x' ? this.maxSpeed : 2.0, this.playbackRate + delta));
+        this.playbackRate = Math.max(0.25, Math.min(this.maxSpeed, this.playbackRate + delta));
         this.audio.playbackRate = this.playbackRate;
         this.speedSpan.textContent = this.playbackRate.toFixed(2);
         this.updateSpeedButtons();
